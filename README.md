@@ -1,4 +1,4 @@
-# Instagram log in Componenent
+# Instagram log in componenent
 
 ## Welcome! 👋
 
