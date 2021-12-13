@@ -69,9 +69,7 @@ morningModeToggle.addEventListener("click", function (e) {
 
 form.addEventListener("keyup", function (e) {
   const isValidForm = form.checkValidity();
-  console.log(isValidForm);
 
-  console.log(submitBtn);
   if (isValidForm === true) {
     submitBtn.disabled = false;
   } else submitBtn.disabled = true;
