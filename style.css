@@ -1,0 +1,371 @@
+:root {
+  --color-facebook: #0095f6;
+  --color-facebook-tint: #0095f640;
+  --color-facebook-dark: #4c64a3;
+  --color-black: #262626;
+  --color-grey: #8e8e8e;
+  --color-grey-tint: #f8f8f8;
+  --color-white: #fafafa;
+  --color-placeholder: #26262640;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes imgChangeFadeInOut {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-0.5rem);
+  }
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 39.375em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media only screen and (max-width: 22.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(359.68deg, #5e951b -147.79%, #8aa646 -67.17%, #96c15c 23.83%, #c8e592 73.36%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.evening-colors {
+  background: linear-gradient(360deg, #6c3c2e -16%, #ca6b3e 16.11%, #fe914c 64.53%, #fbc8a9 102.83%, #efd7ca 118.26%);
+}
+
+*:focus {
+  box-shadow: 0 0 0 2px #8e8e8e;
+  outline: none;
+}
+
+::selection {
+  background-color: #dbdbdb;
+}
+
+.main-container {
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.form-container {
+  position: relative;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@media only screen and (max-width: 39.375em) {
+  .form-container {
+    -webkit-box-shadow: 1px 5px 15px -1px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 5px 15px -1px rgba(0, 0, 0, 0.3);
+  }
+}
+.form-container__morning-toggle, .form-container__evening-toggle {
+  position: absolute;
+  top: -12rem;
+  left: 45%;
+  animation: bounce 0.8s infinite alternate;
+}
+.form-container__morning-toggle .evening-toggle__svg,
+.form-container__morning-toggle .morning-toggle__svg, .form-container__evening-toggle .evening-toggle__svg,
+.form-container__evening-toggle .morning-toggle__svg {
+  width: 4rem;
+  cursor: pointer;
+}
+.form-container .hidden {
+  height: 0;
+  opacity: 0;
+}
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  background-color: var(--color-white);
+  padding: 3rem 2rem 3rem 2rem;
+  margin-bottom: 2rem;
+  width: 34rem;
+}
+.form-container .form__logo {
+  height: 6rem;
+}
+.form-container .form__logo-instagram-img {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.form-container .form, .form-container .form input[type=text], .form-container .form input[type=password] {
+  border: 1px solid #8e8e8e;
+}
+.form-container .form input[type=text] {
+  margin-bottom: -1.2rem;
+}
+.form-container .form input[type=text], .form-container .form input[type=password], .form-container .form input[type=submit] {
+  border-radius: 3px;
+  background-color: var(--color-grey-tint);
+  width: 28rem;
+  height: 3.6rem;
+  padding-left: 2rem;
+}
+.form-container .form input[type=text]::placeholder, .form-container .form input[type=password]::placeholder {
+  font-family: inherit;
+  color: var(--color-grey);
+}
+@media only screen and (max-width: 50em) {
+  .form-container .form input[type=text]::placeholder, .form-container .form input[type=password]::placeholder {
+    font-size: smaller;
+  }
+}
+@media only screen and (max-width: 39.375em) {
+  .form-container .form input[type=text]::placeholder, .form-container .form input[type=password]::placeholder {
+    font-size: inherit;
+  }
+}
+.form-container .form input[type=submit] {
+  padding: 0;
+  text-align: center;
+  color: var(--color-white);
+  background: none;
+  border: none;
+  background-color: var(--color-facebook);
+  cursor: pointer;
+}
+.form-container .form input[type=submit]:disabled {
+  background-color: var(--color-facebook-tint);
+  cursor: default;
+}
+.form-container .form__seperator {
+  color: var(--color-grey);
+  width: 28rem;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+.form-container .form__seperator span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+.form-container .form__seperator span::before {
+  content: "";
+  background-color: var(--color-grey);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 52%;
+  width: 12.5rem;
+  height: 1px;
+}
+.form-container .form__seperator span::after {
+  content: "";
+  background-color: var(--color-grey);
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 52%;
+  width: 12.5rem;
+  height: 1px;
+}
+.form-container .form__facebook-log-in .facebook-log-in__link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.form-container .form__facebook-log-in .facebook-log-in__link .facebook-log-in__logo {
+  height: 2rem;
+}
+.form-container .form .facebook-log-in__link,
+.form-container .form .facebook-log-in__link:link,
+.form-container .form .facebook-log-in__link:visited,
+.form-container .form .form__forgot-password:link,
+.form-container .form .form__forgot-password:visited,
+.form-container .form .form__forgot-password {
+  text-decoration: none;
+  color: var(--color-facebook-dark);
+}
+.form-container .form .facebook-log-in__link:hover,
+.form-container .form .facebook-log-in__link:link:hover,
+.form-container .form .facebook-log-in__link:visited:hover,
+.form-container .form .form__forgot-password:link:hover,
+.form-container .form .form__forgot-password:visited:hover,
+.form-container .form .form__forgot-password:hover {
+  text-decoration: underline;
+}
+.form-container .form__forgot-password {
+  font-size: 1.4rem;
+}
+.form-container .form__sign-up {
+  text-align: center;
+  background-color: var(--color-white);
+  border: 1px solid #8e8e8e;
+  position: relative;
+  background-color: var(--color-white);
+  padding: 2rem 2rem 2rem 1rem;
+  width: 100%;
+}
+.form-container .form__sign-up .sign-up__text {
+  font-size: 1.4rem;
+}
+.form-container .form__sign-up .sign-up__link:link,
+.form-container .form__sign-up .sign-up__link:visited,
+.form-container .form__sign-up .sign-up__link {
+  text-decoration: none;
+  color: var(--color-facebook);
+  font-weight: 700;
+  margin-left: 1rem;
+}
+.form-container .form__sign-up .sign-up__link:hover {
+  text-decoration: underline;
+}
+.form-container .form__sign-up .store {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.form-container .form__sign-up .store__apple {
+  width: 14rem;
+  height: 4.6rem;
+}
+.form-container .form__sign-up .store__google {
+  width: 20rem;
+  height: 13.8rem;
+  transform: translateY(-0.2rem);
+}
+.form-container .form__sign-up .store__google-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.form-container .form__sign-up .store .apple__link,
+.form-container .form__sign-up .store .apple__link:link,
+.form-container .form__sign-up .store .apple__link:visited,
+.form-container .form__sign-up .store .google__link,
+.form-container .form__sign-up .store .google__link:link,
+.form-container .form__sign-up .store .google__link:visited {
+  text-decoration: none;
+}
+
+.phone-container {
+  height: 70rem;
+  width: 33rem;
+  position: relative;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@media only screen and (max-width: 39.375em) {
+  .phone-container {
+    display: none;
+  }
+}
+.phone-container__top-img {
+  height: 100%;
+  position: relative;
+}
+.phone-container .phone-container__img {
+  height: 100%;
+}
+.phone-container__img-text {
+  font-family: "Rufina", serif;
+  color: var(--color-black);
+  position: absolute;
+  text-align: center;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-20%);
+}
+.phone-container__img-text--evening {
+  transform: translateX(-30%);
+}
+.phone-container__img {
+  display: block;
+}
+.phone-container__behind-img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation-name: imgChangeFadeInOut;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
+}
+
+.phone-hidden {
+  display: none;
+}
+/*# sourceMappingURL=index.3d0324bf.css.map */
