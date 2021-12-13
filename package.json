@@ -1,0 +1,25 @@
+{
+  "name": "social_media_login",
+  "version": "1.0.0",
+  "description": "Instagram login component",
+  "scripts": {
+    "start": "parcel ./html/index.html",
+    "build": "parcel build ./html/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenChis/instagram_login.git"
+  },
+  "author": "Benjamin Scharf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenChis/instagram_login/issues"
+  },
+  "homepage": "https://github.com/BenChis/instagram_login#readme",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.0.1",
+    "@parcel/transformer-sass": "^2.0.1",
+    "@parcel/transformer-webmanifest": "^2.0.1",
+    "parcel": "^2.0.1"
+  }
+}

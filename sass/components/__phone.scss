@@ -1,0 +1,59 @@
+.phone-container {
+  height: 70rem;
+  width: 33rem;
+  position: relative;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  @include respond(phone) {
+    display: none;
+  }
+
+  &__top-img {
+    height: 100%;
+    position: relative;
+  }
+
+  .phone-container__img {
+    height: 100%;
+  }
+
+  &__img-text {
+    font-family: "Rufina", serif;
+    color: var(--color-black);
+    position: absolute;
+    text-align: center;
+
+    top: 15%;
+    left: 50%;
+    transform: translateX(-20%);
+
+    &--evening {
+      transform: translateX(-30%);
+    }
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__behind-img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    animation-name: imgChangeFadeInOut;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+  }
+}
+
+.phone-hidden {
+  display: none;
+}

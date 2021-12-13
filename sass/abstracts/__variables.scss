@@ -1,0 +1,37 @@
+// CSS CUSTOM PROPERTIES
+:root {
+  --color-facebook: #0095f6;
+  --color-facebook-tint: #0095f640;
+
+  --color-facebook-dark: #4c64a3;
+
+  --color-black: #262626;
+
+  --color-grey: #8e8e8e;
+  --color-grey-tint: #f8f8f8;
+
+  --color-white: #fafafa;
+  --color-placeholder: #26262640;
+}
+
+// SASS VARIABLES
+$color-grey: #8e8e8e;
+$color-grey-tint: #dbdbdb;
+
+// Colors for the mornining and evening toggle
+$--color-gradient-evening-orangered: linear-gradient(
+  360deg,
+  #6c3c2e -16%,
+  #ca6b3e 16.11%,
+  #fe914c 64.53%,
+  #fbc8a9 102.83%,
+  #efd7ca 118.26%
+);
+
+$--color-gradient-morning-green: linear-gradient(
+  359.68deg,
+  #5e951b -147.79%,
+  #8aa646 -67.17%,
+  #96c15c 23.83%,
+  #c8e592 73.36%
+);

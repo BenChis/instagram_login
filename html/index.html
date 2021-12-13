@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta describition="Instagram log in variation" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- !!!!!!!!!!!!!!!!! -->
+    <!-- Favicon optimised -->
+    <!-- !!!!!!!!!!!!!!!!! -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon_package_v0.16/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon_package_v0.16/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicon_package_v0.16/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="../assets/favicon_package_v0.16/site.webmanifest"
+    />
+    <link
+      rel="mask-icon"
+      href="../assets/favicon_package_v0.16/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- !!!!!!!!!!!!!!!!! -->
+    <!-- Font Familie-->
+    <!-- !!!!!!!!!!!!!!!!! -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rufina&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- !!!!!!!!!!!!!!!!! -->
+    <!-- Stylesheets-->
+    <!-- !!!!!!!!!!!!!!!!! -->
+    <link rel="stylesheet" href="../main.scss" />
+    <title>Instagram log in page</title>
+  </head>
+
+  <body>
+    <!-- No Header in this page -->
+    <main class="main-container">
+      <!-- !!!!!!!!!!!!!!!!! -->
+      <!-- Phone Images evening ->
+      <!-- !!!!!!!!!!!!!!!!! -->
+      <div class="phone-container">
+        <!-- GREEN MORNING OBSERVER -->
+        <div class="phone-container__top-img">
+          <p class="phone-container__img-text">
+            Protect your data <br />
+            and privacy
+          </p>
+          <img
+            src="../assets/iphone-img/Observer_iPhone.png"
+            alt="Guy who oberseves natur"
+            class="phone-container__img phone-container__img--top"
+          />
+        </div>
+        <!-- GREEN MORNING WATERFALL -->
+        <div class="phone-container__behind-img">
+          <img
+            src="../assets/iphone-img/Waterfall_iPhone.png"
+            alt="Guy who oberseves natur"
+            class="phone-container__img phone-container__img--bottom"
+          />
+        </div>
+      </div>
+
+      <!-- !!!!!!!!!!!!!!!!! -->
+      <!-- Phone Images morning ->
+      <!-- !!!!!!!!!!!!!!!!! -->
+      <div class="phone-container phone-hidden">
+        <!-- EVENING MOUNTAIN SUNSET -->
+        <div class="phone-container__top-img">
+          <p
+            class="phone-container__img-text phone-container__img-text--evening"
+          >
+            Wht not registor on another day. Life is to short to scroll through
+            news feed.
+          </p>
+          <img
+            src="../assets/iphone-img/Mountainfriends_iPhone.png"
+            alt="Mountin sunset photo"
+            class="phone-container__img phone-container__img--top"
+          />
+        </div>
+        <!-- EVENING LAKE SUNSET -->
+        <div class="phone-container__behind-img">
+          <img
+            src="../assets/iphone-img/Sunset_iPhone.png"
+            alt="Sunset over lake"
+            class="phone-container__img phone-container__img--bottom"
+          />
+        </div>
+      </div>
+
+      <!-- !!!!!!!!!!!!!!!!! -->
+      <!-- Form -->
+      <!-- !!!!!!!!!!!!!!!!! -->
+      <div class="form-container">
+        <div class="form-container__evening-toggle">
+          <svg class="evening-toggle__svg">
+            <use xlink:href="../sprite.svg#eye_open"></use>
+          </svg>
+        </div>
+
+        <div class="form-container__morning-toggle">
+          <svg class="morning-toggle__svg hidden">
+            <use xlink:href="../sprite.svg#eye_closed"></use>
+          </svg>
+        </div>
+
+        <form action="#" class="form">
+          <header class="form__logo">
+            <img
+              src="../assets/images_original/instagram_logo.png"
+              alt="Instagram logo"
+              class="form__logo-instagram-img"
+            />
+          </header>
+
+          <label for="userdata" id="userdata"></label>
+          <input
+            type="text"
+            id="userName"
+            placeholder="Phone number, username, or email"
+            required
+          />
+
+          <label for="password" id="password"></label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <input
+            type="submit"
+            disabled="disabled"
+            value="Log In"
+            id="submit-btn"
+          />
+          <div class="form__seperator"><span>or</span></div>
+          <div class="form__facebook-log-in">
+            <a href="#" class="facebook-log-in__link">
+              <img
+                src="../assets/Svgs/facebook_logo.svg"
+                class="facebook-log-in__logo"
+              />
+              <p class="facebook-log-in__text">Log in with Facebook</p>
+            </a>
+          </div>
+          <a href="#" class="form__forgot-password">Forgotten your Password?</a>
+        </form>
+
+        <div class="form__sign-up">
+          <p class="sign-up__text">
+            Don't have an account?
+            <a href="#" class="sign-up__link"> Sign up</a>
+          </p>
+
+          <div class="store">
+            <a
+              href="https://www.apple.com/de/search/instagram?src=globalnav"
+              class="apple__link"
+            >
+              <svg class="store__apple">
+                <use xlink:href="../sprite.svg#apple_store"></use></svg
+            ></a>
+
+            <div class="store__google">
+              <a
+                href="https://play.google.com/store/search?q=instagram&hl=de&gl=US"
+                class="apple__link"
+              >
+                <img
+                  src="../assets/images_original/google_playstore.png"
+                  alt="google play store icon"
+                  class="store__google-img"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- !!!!!!!!!!!!!!!!! -->
+    <!-- Script Tag -->
+    <!-- !!!!!!!!!!!!!!!!! -->
+    <script src="../js/script.js"></script>
+  </body>
+</html>
