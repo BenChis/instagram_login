@@ -49,7 +49,7 @@ The functions calls are straight forward. Two possible ways a user can interact 
 
 You can **preview** the project with this link!
 
-- [GitHub Pages](https://benchis.github.io/ecommerce_product_page/)
+- [GitHub Pages](https://social-log-in.netlify.app/
 
 ### Experience on the project
 
