@@ -38,17 +38,14 @@ const updateMode = function () {
 };
 
 // Retrieving current mode from local storage and update the UI
-const updatingUI = function () {
+const updatingUiEvening = function () {
   if (lastMode === "evening") {
     modeChanger();
     eveningColors();
     phoneChanger();
   }
 
-  if (lastMode === "morning") {
-    eveningColors();
-    phoneChanger();
-  }
+  // No Morning implementation because by default it is set to morning
 };
 
 // Chaning the colours to the evening  version
@@ -76,7 +73,7 @@ const phoneChanger = function () {
 
 eveningModeToggle.addEventListener("click", function (e) {
   lastMode = localStorage.getItem("lastMode");
-  console.log(lastMode);
+
   eveningColors();
   modeChanger();
   phoneChanger();
@@ -84,14 +81,14 @@ eveningModeToggle.addEventListener("click", function (e) {
 
 morningModeToggle.addEventListener("click", function (e) {
   lastMode = localStorage.getItem("lastMode");
-  console.log(lastMode);
+
   eveningColors();
   modeChanger();
   phoneChanger();
 });
 
 // Calling the updatingUI whenever the page reloads
-updatingUI();
+updatingUiEvening();
 
 //////////////////////
 // FORM VALIDATION
